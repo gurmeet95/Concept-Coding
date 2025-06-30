@@ -2,6 +2,7 @@ package stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StreamExampleOne
 {
@@ -26,3 +27,12 @@ public class StreamExampleOne
 // Stream<Integer> streamFromArray=Arrays.stream(salaryArray);
 // 3. From Static method
 // Stream<Integer> streamFromStaticMethod=Stream.of(100,200,300,400);
+
+//4.From StreamBuilder (Need jdk above 21)
+//Stream.Builder<Integer> streamBuilder=Stream.builder();
+//streamBuilder.add(1000).add(2000).add(3000);
+//Stream<Integer> streamFromstreamBuilder= streamBuilder.build();
+
+//5. From Stream Iterate(Jdk21+)
+ //Stream<Integer> streamFromIterate= Stream.iterate(1000,(Integer n)-> n+5000).limit(5);
+
